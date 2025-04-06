@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="keywords" content="EEG, Emotion Detection, Kalman Filter, Deep Belief Network" />
+  <meta name="description" content="EEG-based emotion detection system with real-time predictions and personalized recommendations." />
+  <meta name="author" content="Your Name" />
+  <link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon.png') }}" type="">
+
+  <title>EEG-Based Emotion Detection</title>
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/bootstrap.css') }}" />
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <!-- owl slider stylesheet -->
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+  <!-- font awesome style -->
+  <link href="{{ url_for('static', filename='css/font-awesome.min.css') }}" rel="stylesheet" />
+  <!-- Custom styles for this template -->
+  <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="{{ url_for('static', filename='css/responsive.css') }}" rel="stylesheet" />
+</head>
+
+<body>
+
+  <div class="hero_area">
+
+    <div class="hero_bg_box">
+      <div class="bg_img_box">
+        <img src="{{ url_for('static', filename='images/hero-bg.png') }}" alt="">
+      </div>
+    </div>
+
+    <!-- header section starts -->
+    <header class="header_section">
+      <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg custom_nav-container ">
+          <a class="navbar-brand" href="{{ url_for('index') }}">
+            <span>
+              EEG-Based Emotion Detection
+            </span>
+          </a>
+
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class=""> </span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav  ">
+              <li class="nav-item active">
+                <a class="nav-link" href="{{ url_for('index') }}">Home <span class="sr-only">(current)</span></a>
+              </li>
+              <!-- Change the "href" to "#" followed by the id of the section -->
+              <li class="nav-item">
+                <a class="nav-link" href="#about">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="">Emotion Detection</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('login') }}"> <i class="fa fa-user" aria-hidden="true"></i> Login</a>
+              </li>
+              <form class="form-inline">
+                <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit">
+                  <i class="fa fa-search" aria-hidden="true"></i>
+                </button>
+              </form>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- end header section -->
+
+    <!-- slider section -->
+    <section class="slider_section">
+      <div id="customCarousel1" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-6 ">
+                  <div class="detail-box">
+                    <h1>
+                      Emotion Detection <br>
+                      Through EEG Signals
+                    </h1>
+                    <p>
+                      Leverage EEG signals to identify emotional states using advanced techniques such as the Kalman filter and Deep Belief Networks (DBN). This project aims to enhance personalized treatments and improve mental health assessments.
+                    </p>
+                    <div class="btn-box">
+                      <a href="" class="btn1">
+                        Learn More
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="img-box">
+                    <img src="{{ url_for('static', filename='images/index2.png') }}" alt="">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end slider section -->
+  </div>
+
+  <!-- about section with an id -->
+  <section class="about_section layout_padding" id="about">
+    <div class="container">
+      <div class="heading_container heading_center">
+        <h2>
+          About <span>Our System</span>
+        </h2>
+        <p>
+          Our EEG-based emotion detection system processes brainwave data to identify emotional states using cutting-edge techniques such as Kalman filtering and Deep Belief Networks (DBN).
+        </p>
+      </div>
+      <div class="row">
+        <div class="col-md-6 ">
+          <div class="img-box">
+            <img src="{{ url_for('static', filename='images/index1.jpg') }}" alt="">
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="detail-box">
+            <h3>
+              How It Works
+            </h3>
+            <p>
+              The system preprocesses EEG data, extracts meaningful features, and classifies emotional states with the help of a trained DBN. Through this approach, the system can assist in personalized mental health care and human-computer interaction.
+            </p>
+            <a href="">
+              Read More
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- footer section -->
+  <section class="footer_section">
+    <div class="container">
+      <p>
+        &copy; <span id="displayYear"></span> All Rights Reserved By
+        <a href="https://html.design/">EEG Emotion Detection System</a>
+      </p>
+    </div>
+  </section>
+  <!-- footer section -->
+
+  <!-- jQuery -->
+  <script type="text/javascript" src="{{ url_for('static', filename='js/jquery-3.4.1.min.js') }}"></script>
+  <!-- popper js -->
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <!-- bootstrap js -->
+  <script type="text/javascript" src="{{ url_for('static', filename='js/bootstrap.js') }}"></script>
+  <!-- owl slider -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  <!-- custom js -->
+  <script type="text/javascript" src="{{ url_for('static', filename='js/custom.js') }}"></script>
+  <!-- Google Map -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap"></script>
+  <!-- End Google Map -->
+
+</body>
+
+</html>
